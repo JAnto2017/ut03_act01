@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,9 +42,12 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        String mensaje;
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            mensaje = "elemento buscar seleccionado";
+            Toast.makeText(this,mensaje,Toast.LENGTH_SHORT).show();
             return true;
         }
 
